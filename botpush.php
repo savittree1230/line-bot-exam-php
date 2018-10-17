@@ -13,7 +13,7 @@ $pushID = 'Uc775949b49f07d613d19ce6dd209bddc';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('สวัสดีค่ะคุณดลธรรม กรุณาชำระเงินด้วยค่ะ ^^');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('HRIS : นางสาวสาวิตรี ฟักพูล ลาพักร้อน 1 วัน เริ่ม 17 ตุลาคม 2561 สิ้นสุด 17 ตุลมคม 2561 ** กรุณาตรวจสอบการลา');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
