@@ -12,7 +12,7 @@ $pushID = 'Uc775949b49f07d613d19ce6dd209bddc';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("** กรุณาตรวจสอบการแจ้งลา\nชื่อ: นางสาวสาวิตรี ฟักพูล\nประเภทการลา : ลาพักร้อน 1 วัน\nเริ่มลา 17 ตุลาคม 61\nสิ้นสุดลา : 17 ตุลาคม 61");
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("** กรุณาตรวจสอบการแจ้งลา **\nชื่อ: นางสาวสาวิตรี ฟักพูล\nประเภทการลา : ลาพักร้อน 1 วัน\nเริ่มลา 17 ตุลาคม 2561\nสิ้นสุด : 17 ตุลาคม 2561");
 
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
