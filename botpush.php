@@ -13,7 +13,7 @@ $pushID = 'U7d291e47d415b7101f0f86d4597c9376';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('สวัสดีค่ะคุณดลธรรม กรุณาชำระเงินด้วยค่ะ ^^');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
