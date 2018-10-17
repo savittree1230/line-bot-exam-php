@@ -13,7 +13,7 @@ $pushID = 'Uc775949b49f07d613d19ce6dd209bddc';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $header = 'แจ้งเตือนการลางาน'
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('แจ้งเตือนการลา'.'<br>'.'ชื่อ : นางสาวสาวิตรี ฟักพูล \r\n ประเภทการลา : ลาพักร้อน 1 วัน \r\n เริ่ม : 17 ตุลาคม 2561 \r\n สิ้นสุด : 17 ตุลมคม 2561 \r\n ** กรุณาตรวจสอบการลา');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('แจ้งเตือนการลา <br/> ชื่อ : นางสาวสาวิตรี ฟักพูล \r\n ประเภทการลา : ลาพักร้อน 1 วัน \n เริ่ม : 17 ตุลาคม 2561 \r\n สิ้นสุด : 17 ตุลมคม 2561 \r\n ** กรุณาตรวจสอบการลา');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
