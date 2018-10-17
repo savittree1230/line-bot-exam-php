@@ -13,7 +13,7 @@ $pushID = 'Uc775949b49f07d613d19ce6dd209bddc';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $header = 'แจ้งเตือนการลางาน'
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("แจ้งเตือนการลา<\n> ชื่อ : นางสาวสาวิตรี ฟักพูล");
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('แจ้งเตือนการลา<\n> ชื่อ : นางสาวสาวิตรี ฟักพูล');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
